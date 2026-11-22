@@ -1,0 +1,42 @@
+#pragma code_page(65001)
+#include <windows.h>
+#include "resource.h"
+
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+
+IDD_ABOUT DIALOGEX 0, 0, 210, 132
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 TxtAutoWrap"
+FONT 9, "Microsoft YaHei UI", 400, 0, 0x86
+BEGIN
+    GROUPBOX        "TxtAutoWrap", -1, 10, 7, 190, 95, BS_CENTER
+    LTEXT           "作者：xiali8726", -1, 28, 28, 160, 10
+    LTEXT           "版本：1.1", -1, 28, 50, 160, 10
+    LTEXT           "许可证：GPL", -1, 28, 72, 160, 10
+    DEFPUSHBUTTON   "关闭", IDOK, 80, 110, 50, 14
+END
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION    TXTAUTOWRAP_VERSION_NUM
+ PRODUCTVERSION TXTAUTOWRAP_VERSION_NUM
+ FILEOS         VOS_NT_WINDOWS32
+ FILETYPE       VFT_DLL
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "FileDescription", "TxtAutoWrap - Notepad++ 插件：txt 文件自动换行"
+            VALUE "FileVersion", "1.1"
+            VALUE "ProductName", "TxtAutoWrap"
+            VALUE "ProductVersion", "1.1"
+            VALUE "OriginalFilename", "TxtAutoWrap.dll"
+            VALUE "CompanyName", "xiali8726"
+            VALUE "LegalCopyright", "Copyright (C) 2026 xiali8726, GPL-3.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0804, 1200
+    END
+END
